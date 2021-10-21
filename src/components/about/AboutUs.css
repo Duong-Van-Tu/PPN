@@ -1,0 +1,42 @@
+.home__about-staff {
+  padding-right: 30px;
+}
+
+.home__about-title {
+  font-size: 32px;
+  color: #990000;
+  font-weight: 600;
+  padding-bottom: 2px;
+  position: relative;
+}
+
+.home__about-title::after {
+  position: absolute;
+  content: "";
+  width: 110px;
+  height: 4px;
+  border-radius: 10px;
+  background: #005093;
+  bottom: 0;
+  left: 0;
+}
+
+.home__about-paragraph {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.home__about-btn {
+  background: #00adef;
+  border-radius: 8px;
+  padding: 5px 10px 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.home__about-btn:hover {
+  background-color: #005baa;
+  color: #fff;
+}

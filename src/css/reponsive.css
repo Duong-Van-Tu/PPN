@@ -1,0 +1,49 @@
+/* PC */
+@media (min-width: 64em) {
+}
+
+/* MOBILE && TABLET */
+@media (max-width: 63.9375em) {
+}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 64em) {
+  .navbar__menu-list {
+    display: none;
+  }
+  .navbar__btn-language {
+    padding: 0 16px;
+  }
+
+  /* Banner */
+  .home__banner {
+    height: 60vh;
+  }
+
+  .banner-slogan-text {
+    font-size: 32px;
+  }
+  .banner-slogan {
+    display: none;
+  }
+
+  .navbar__info-item {
+    flex-direction: column;
+  }
+
+  .navbar__right-email::after {
+    display: none;
+  }
+
+  .navbar__right-info {
+    justify-content: space-around;
+  }
+
+  .navbar__left {
+    margin-right: 10px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 46.1875em) {
+}
