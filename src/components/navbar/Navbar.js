@@ -22,33 +22,23 @@ const Navbar = () => {
   });
 
   return (
-    <div className="navbar bg-white fixed top-0 left-0 right-0 flex items-center justify-between px-4 py-4 shadow-sm ">
+    <div className="navbar bg-white fixed top-0 left-0 right-0 flex items-center justify-between px-4 pt-4 py-2 shadow-sm ">
       <div className="navbar__left mr-20">
         <Link to="/">
-          <img className="w-64" src="./images/logo.png" alt="logo" />
+          <img className="w-96" src="./images/logo.png" alt="logo" />
         </Link>
       </div>
       <div className="navbar__right flex-1">
         <div className="navbar__right-info flex justify-end relative">
           <div className="navbar__info-item flex relative">
-            <div className="text-base font-normal px-8">
+            <div className="navbar_hotline px-8">
               Hotline:
               <a
                 href="tel:0977773553"
-                className="navbar__info-link hover:text-green-600"
+                className="navbar__info-link hover:text-green-600 "
               >
                 {" "}
-                0977773553
-              </a>
-            </div>
-            <div className="navbar__right-email relative text-base font-normal px-8">
-              Email:
-              <a
-                href="mailto:ppn.logistics88@gmail.com"
-                className="navbar__info-link hover:text-green-600"
-              >
-                {" "}
-                ppn.logistics88@gmail.com
+                0902999000
               </a>
             </div>
           </div>
@@ -88,44 +78,44 @@ const Navbar = () => {
         <div className="navbar__menu-list md:flex flex-wrap justify-around items-center space-x-1">
           <Link
             to="/"
-            className={`navbar__menu-link relative px-3 py-2 text-gray-700 hover:text-red-900 text-base font-medium rounded-lg ${active}`}
+            className={`navbar__menu-link relative px-3 py-2 text-gray-700 hover:text-red-900 rounded-lg ${active}`}
           >
             <i className="fad fa-home"></i> Home
           </Link>
           <Link
             to="/service"
-            className={`flex items-center navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900 text-base font-medium ${active}`}
+            className={`flex items-center navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900 ${active}`}
           >
             <i className="mr-0.5 fad fa-clone"></i>Dịch vụ
           </Link>
 
           {/* <Link
             to="/customer"
-            className="navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900 text-base font-medium"
+            className="navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900"
           >
             <i className="mr-0.5 fad fa-user-friends"></i>Trải nghiệm khách hàng
           </Link> */}
           <Link
             to="/about"
-            className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900 text-base font-medium`}
+            className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900`}
           >
             <i className="mr-0.5 fad fa-address-card"></i>Về chúng tôi
           </Link>
           <Link
             to="/price"
-            className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900 text-base font-medium`}
+            className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900`}
           >
             <i className="mr-0.5 fad fa-dollar-sign"></i>Báo giá
           </Link>
           <Link
             to="/news"
-            className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900 text-base font-medium`}
+            className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900`}
           >
             <i className="mr-0.5 fad fa-newspaper"></i>Tin tức
           </Link>
           {/* <Link
             to="/contact"
-            className="navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900 text-base font-medium"
+            className="navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900"
           >
             <i className="mr-0.5 fad fa-phone-square"></i>Liên hệ
           </Link> */}

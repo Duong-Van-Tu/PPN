@@ -21,15 +21,7 @@ const Price = () => {
                 <h2 className="pl-3  text-2xl text-yellow ">Dịch Vụ</h2>
               </div>
             </div>
-            <Link
-              to="/service"
-              className="sidebar__link px-2.5 py-1.5 flex items-center space-x-3 rounded-md"
-            >
-              <div className="flex flex justify-center items-center content-start py-2">
-                <i class="fad fa-plane-departure"></i>
-                <h2 className="pl-3">Vận Chuyển Đường Không</h2>
-              </div>
-            </Link>
+           
             <Link
               to="/service"
               className="sidebar__link px-2.5 py-1.5 flex items-center space-x-3 rounded-md"

@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <Navbar></Navbar>
-      <main className="relative top-20">
+      <main className="relative top-24">
         <PhoneAndZalo></PhoneAndZalo>
         <Switch>
           <Route exact path="/">

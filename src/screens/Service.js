@@ -30,6 +30,7 @@ const Service = () => {
   return (
     <div className="service">
       <div className="service__banner">
+      <div className="service__banner h-96">
         <div className="relative h-96 overflow-hidden">
           {services.map((data, index) => {
             return (
@@ -50,13 +51,11 @@ const Service = () => {
                   </button>
                 </div>
                 <div className="w-2/3 h-96">
-                  <div>
-                    <img
-                      src={`./images/img${index + 1}.png`}
-                      className="w-full object-cover"
-                      alt=""
-                    />
-                  </div>
+                  <img
+                    src={`./images/img${index + 1}.png`}
+                    className="w-full object-cover"
+                    alt=""
+                  />
                 </div>
               </div>
             );
@@ -72,6 +71,7 @@ const Service = () => {
           </div>
         </div>
       </div>
+      </div>
       <div className="service__main mx-8 mt-8 pb-8">
         <div className="service__main-intro">
           <h2>Dịch Vụ Chính</h2>
@@ -84,24 +84,8 @@ const Service = () => {
           </p>
         </div>
         <main className="service__container mt-8">
-          <div className="service__card rounded-lg">
-            <img src="./images/img1.png" className="rounded-lg" alt="" />
-            <div>
-              <h2 className="service__intro-title">Vận Chuyển Đường Không</h2>
-              <p className="service__intro-paragraph py-2 pr-2 text-justify">
-                Trải nghiệm dịch vụ Vận chuyển đường hàng không với lịch trình
-                đảm bảo, giá cước cạnh tranh, sẵn sàng thiết kế theo yêu cầu
-                riêng của từng khách hàng cùng Dolphin Sea Air Services Corp.
-                Chúng tôi là đại lý bán cước và có hợp đồng vận chuyển với nhiều
-                hãng hàng không uy tín với tần suất bay cao, tải trọng lớn và
-                tuyến bay phủ sóng hầu hết mọi nơi trên thế giới.
-              </p>
-              <Link to="/service" className="btn service__btn">
-                Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
-              </Link>
-            </div>
-          </div>
-          <div className="service__card">
+         
+          <div className="service__card rounded-t-lg">
             <div className="pl-4">
               <h2 className="service__intro-title">Vận Chuyển Đường Biển</h2>
               <p className="service__intro-paragraph py-2 p-2 text-justify">
@@ -110,7 +94,7 @@ const Service = () => {
                 trạng rớt hàng ở cảng đi và các cảng chuyển tải, bởi dịch vụ vận
                 chuyển đường biển của chúng tôi có thể đáp ứng đầy đủ nhu cầu
                 vận chuyển hàng hóa đến được tất cả các cảng trong/ ngoài nước
-                bằng giải pháp vận tải tối ưu. Dolphin Sea Air Services Corp. sở
+                bằng giải pháp vận tải tối ưu. <b> PPN LOGISTICS </b>. sở
                 hữu hợp đồng đối tác với các hãng tàu lớn và hệ thống đại lý uy
                 tín trên toàn thế giới, do đó, dịch vụ vận chuyển đường biển của
                 chúng tôi được đảm bảo chất lượng dịch vụ với mức giá cạnh tranh
@@ -120,17 +104,17 @@ const Service = () => {
                 Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
               </Link>
             </div>
-            <img src="./images/img2.png" className="rounded-lg" alt="" />
+            <img src="./images/img1.png" className="rounded-lg" alt="" />
           </div>
           <div className="service__card">
-            <img src="./images/img3.png" className="rounded-lg" alt="" />
+            <img src="./images/img2.png" className="rounded-lg" alt="" />
             <div>
               <h2 className="service__intro-title">Gom Hàng Lẻ LCL</h2>
               <p className="service__intro-paragraph py-2 pr-2 text-justify">
-                dịch vụ Gom Hàng Lẻ (LCL) của Dolphin Sea Air Service Corp.
-                Dolphin Sea Air Service Corp. là Top 10 Việt Nam (Top 2 khu vực
+                dịch vụ Gom Hàng Lẻ (LCL) của <b> PPN LOGISTICS </b>.
+                <b> PPN LOGISTICS </b>. là Top 10 Việt Nam (Top 2 khu vực
                 phía Bắc) trong lĩnh vực Gom hàng lẻ nhập khẩu (Inbound
-                Consolidation). Dolphin Sea Air Service Corp. tự hào nằm trong
+                Consolidation). <b> PPN LOGISTICS </b>. tự hào nằm trong
                 những nhà cung cấp dịch vụ gom hàng lẻ hàng đầu tại Việt Nam
                 hiện nay, đáp ứng tất cả các nhu cầu vận chuyển đa quốc gia hoàn
                 chỉnh cho các lô hàng với khối lượng không đủ một container.
@@ -147,7 +131,7 @@ const Service = () => {
                 Vận tải đường bộ xuyên biên giới có thể giúp các doanh nghiệp
                 tiết kiệm thời gian vận chuyển so với đường biển và tiết kiệm
                 chi phí hơn so với đường hàng không. Nắm bắt được nhu cầu của
-                khách hàng, Dolphin Sea Air Services Corp. đã phát triển dịch vụ
+                khách hàng, <b> PPN LOGISTICS </b> đã phát triển dịch vụ
                 vận chuyển xuyên biên giới đến Trung Quốc, Cambodia, Laos cũng
                 như vận chuyển nội địa trong nước. Kết hợp với dịch vụ thông
                 quan chuyên nghiệp, chúng tôi đảm bảo quá trình giao nhận tại
@@ -155,23 +139,23 @@ const Service = () => {
                 nhiều cho khách hàng. Sở hữu hệ thống hơn 60 xe tải hiện đại, đủ
                 chủng loại, cùng các hợp đồng thầu phụ, phục vụ đa dạng nhu cầu
                 của khách hàng, tất cả các xe chuyên chở đều gắn định vị GPS,
-                Dolphin Sea Air Corp. tự tin mang đến chất lượng dịch vụ hoàn
+                <b> PPN LOGISTICS </b>. tự tin mang đến chất lượng dịch vụ hoàn
                 hảo nhất.
               </p>
               <Link to="/service" className="btn service__btn">
                 Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
               </Link>
             </div>
-            <img src="./images/img4.png" className="rounded-lg" alt="" />
+            <img src="./images/img3.png" className="rounded-lg" alt="" />
           </div>
           <div className="service__card">
-            <img src="./images/img5.png" className="rounded-lg" alt="" />
+            <img src="./images/img4.png" className="rounded-lg" alt="" />
             <div>
               <h2 className="service__intro-title">Khai Thuế Hải Quan</h2>
               <p className="service__intro-paragraph py-2 pr-2 text-justify">
                 Xóa bỏ mọi nỗi lo về quy trình giấy tờ, tiết kiệm thời gian với
                 dịch vụ Khai thuê Hải Quan của chúng tôi! Sở hữu đội ngũ chuyên
-                gia đông đảo – giàu kinh nghiệm, Dolphin Sea Air Services Corp.
+                gia đông đảo – giàu kinh nghiệm, <b> PPN LOGISTICS </b>
                 có thể xử lý được toàn bộ các giấy tờ, thủ tục liên quan đến Hải
                 quan và giấy phép xuất nhập khẩu trong thời gian ngắn nhất, cùng
                 mức phí hấp dẫn nhất.

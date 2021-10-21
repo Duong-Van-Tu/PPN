@@ -1,10 +1,10 @@
 .navbar {
   z-index: 999;
 }
-.navbar__menu-list .active {
-  color: #333333;
-  background-color: #8df3fe;
+.navbar__menu-list {
+  font-weight: 600;
 }
+
 .navbar__menu-link:hover:after {
   width: calc(100% - 20px);
   opacity: 1;
@@ -44,9 +44,10 @@
   background-color: #ccc;
 }
 
-/* .navbar__left {
-    cursor: pointer;
-  } */
+.navbar_hotline {
+  font-size: 18px;
+  font-weight: 450;
+}
 
 @keyframes navbarLanguage {
   from {

@@ -2,13 +2,6 @@ import { v4 as uuidv4 } from "uuid";
 export const services = [
   {
     id: uuidv4(),
-    title: "Vận Chuyển Đường Không",
-    description:
-      "Không cần lo lắng về việc vận chuyển khối lượng hàng lớn tới những địa điểm xa ở bất cứ nơi đâu trên thế giới, không còn tình trạng rớt hàng ở cảng đi và các cảng chuyển tải, bởi dịch vụ vận chuyển đường biển của chúng tôi có thể đáp ứng đầy đủ nhu cầu vận chuyển hàng hóa đến được tất cả các cảng trong/ ngoài nước bằng giải pháp vận tải tối ưu",
-    subTitle: "Lorem",
-  },
-  {
-    id: uuidv4(),
     title: "Vận Chuyển Đường Biển",
     description:
       "Trải nghiệm dịch vụ Vận chuyển đường hàng không với lịch trình đảm bảo, giá cước cạnh tranh, sẵn sàng thiết kế theo yêu cầu riêng của từng khách hàng cùng Dolphin Sea Air Services Corp",
@@ -45,8 +38,7 @@ export const services = [
     position: "Tư vấn viên",
     email: "loan@gmail.com",
     phoneNumber: "0977 773 553",
-    facebook: "facebook.com",
-    zalo: "zalo.com",
+    zalo: "0977773553",
   },
   {
     id: uuidv4(),
@@ -55,8 +47,7 @@ export const services = [
     image: "./images/employee_nu.png",
     email: "ngan@gmail.com",
     phoneNumber: "0903 999 000",
-    facebook: "facebook.com",
-    zalo: "zalo.com",
+    zalo: "0903999000",
   },
   {
     id: uuidv4(),
@@ -64,9 +55,8 @@ export const services = [
     position: "Tư vấn viên",
     image: "./images/employee_nam.png",
     email: "nguyen@gmail.com",
-    phoneNumber: "0903 999 000",
-    facebook: "facebook.com",
-    zalo: "zalo.com",
+    phoneNumber: "0918 081 092",
+    zalo: "0773641222",
   },
   {
     id: uuidv4(),
@@ -75,7 +65,6 @@ export const services = [
     image: "./images/employee_nam.png",
     email: "tung@gmail.com",
     phoneNumber: "0902 999 000",
-    facebook: "facebook.com",
-    zalo: "zalo.com",
+    zalo: "0902999000",
   },
 ];

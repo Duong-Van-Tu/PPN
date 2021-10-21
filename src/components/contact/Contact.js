@@ -21,7 +21,6 @@ const Contact = () => {
       <div className="home-contact-title ml-8 relative">Hỗ Trợ Khách Hàng</div>
       <Slider {...settings}>
         {employees.map(function (employee, index) {
-          const phoneNumber = employee.phoneNumber.replace(/\s/g, "");
           return (
             <div key={index}>
               <div className="py-4 px-6">
@@ -53,7 +52,7 @@ const Contact = () => {
                   </article>
                   <div className="home-contact-actions">
                     <a
-                      href={`https://zalo.me/${phoneNumber}`}
+                      href={`https://zalo.me/${employee.zalo}`}
                       className="btn"
                       target="_blank"
                     >

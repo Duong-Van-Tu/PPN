@@ -101,6 +101,7 @@
 .service__card img .service__intro-paragraph {
   font-size: 16px;
   align-items: justify;
+  font-weight: 500;
 }
 .service__btn {
   background: #294461;
