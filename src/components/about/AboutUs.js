@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./AboutUs.css";
 const AboutUs = () => {
   return (
@@ -9,9 +10,7 @@ const AboutUs = () => {
           height="350"
           src="https://www.youtube.com/embed/Rrp-FNYHC4s"
           title="YouTube video player"
-        
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-   
         ></iframe>
       </div>
       <div className="home__about-introduce">
@@ -39,9 +38,11 @@ const AboutUs = () => {
             <b>“SPEEDY WITH BEST CARE”.</b>
           </p>
         </div>
-        <button className="home__about-btn">
-          Xem thêm <i className="fad fa-chevron-double-right text-xs"></i>
-        </button>
+        <Link to="/about">
+          <button className="home__about-btn">
+            Xem thêm <i className="fad fa-chevron-double-right text-xs"></i>
+          </button>
+        </Link>
       </div>
     </div>
   );
