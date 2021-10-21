@@ -59,9 +59,9 @@ const Navbar = () => {
             <img src="./images/vi-vn.png" width="20" alt="" />
             <i className="mx-0.5 fad fa-caret-down"></i>
           </button>
-          <button>
+          {/* <button>
             <i class="fas fa-bars"></i>
-          </button>
+          </button> */}
           <div
             className={`${showLanguage} absolute z-10 bg-gray-50 w-32 top-8 rounded-lg right-0 shadow`}
           >
