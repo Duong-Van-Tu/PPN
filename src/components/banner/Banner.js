@@ -59,10 +59,10 @@ const Banner = () => {
       <div className="absolute w-full top-0">
         <div className="banner-top top-0 py-16">
           <div className="banner-slogan">
-            <div className="text-center pb-4 text-3xl font-medium">
+            <div className="text-center w-full pb-4 text-3xl font-medium">
               Giao Nhận Vận Tải & Logistics{" "}
             </div>
-            <div className="banner-slogan-text text-center text-3xl font-bold">
+            <div className="banner-slogan-text w-full text-center text-3xl font-bold">
               Nhanh Chóng - Chuyên Nghiệp - Linh Hoạt - Hiệu Quả
             </div>
           </div>
