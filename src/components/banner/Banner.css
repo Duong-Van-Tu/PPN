@@ -3,29 +3,22 @@
   color: #fff;
 }
 
-.banner-top {
-  position: absolute;
-  top: 0;
-  left: 18%;
-  right: 18%;
-}
-
 .banner-slogan {
-  color: #980000;
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 70px;
+  color: #990101;
 }
 
-.banner-search input {
-  background: #17609e;
+.slogan-top {
+  font-size: 34px;
+  font-weight: 500;
 }
 
-.banner-search button {
-  background: #a12b2b;
-}
-
-.banner-search button:hover {
-  background: #980000;
+.slogan-bottom {
+  font-size: 36px;
+  font-weight: 650;
 }
 
 /* Banner slider */

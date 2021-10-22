@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import {services} from "../../data/data"
-import BtnSlider from "../BtnSlider"
-import './Banner.css'
+import { services } from "../../data/data";
+import BtnSlider from "../BtnSlider";
+import "./Banner.css";
 const Banner = () => {
-  
   const [slideIndex, setSlideIndex] = useState(1);
 
   const nextSlide = () => {
@@ -50,23 +49,19 @@ const Banner = () => {
 
       <div className="container-dots">
         {Array.from({ length: 5 }).map((item, index) => (
-          <div key={index}
+          <div
+            key={index}
             onClick={() => moveDot(index + 1)}
             className={slideIndex === index + 1 ? "dot active" : "dot"}
           ></div>
         ))}
       </div>
-      <div className="absolute w-full top-0">
-        <div className="banner-top top-0 py-16">
-          <div className="banner-slogan">
-            <div className="text-center w-full pb-4 text-3xl font-medium">
-              Giao Nhận Vận Tải & Logistics{" "}
-            </div>
-            <div className="banner-slogan-text w-full text-center text-3xl font-bold">
-              Nhanh Chóng - Chuyên Nghiệp - Linh Hoạt - Hiệu Quả
-            </div>
-          </div>
-          {/* <div className="banner-search text-center pt-16">
+      <div className="banner-slogan absolute">
+        <div className="slogan-top">Giao Nhận Vận Tải & Logistics </div>
+        <div className="slogan-bottom">
+          Nhanh Chóng - Chuyên Nghiệp - Linh Hoạt - Hiệu Quả
+        </div>
+        {/* <div className="banner-search text-center pt-16">
             <input
               className="py-2 px-4 w-2/4 rounded-l-full outline-none font-normal"
               type="text"
@@ -76,7 +71,6 @@ const Banner = () => {
               Tìm kiếm
             </button>
           </div> */}
-        </div>
         <div className="banner-bottom"></div>
       </div>
     </div>
