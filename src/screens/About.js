@@ -80,12 +80,12 @@ const About = () => {
         <div className="about__intro flex">
           <img
             src="./images/about1.png"
-            className="w-full rounded-l-lg"
+            className="rounded-l-lg"
             alt=""
           />
           <div className="about__intro-right rounded-r-lg">
             <h2 className="about__intro-title">Về Chúng Tôi</h2>
-            <div className="text-justify px-4">
+            <div className="text-justify px-4 text-lg font-medium">
               <p>
                 Công ty <b> TNHH Giao Nhận Vận Tải PPN </b> hoạt động trong lĩnh
                 vực dịch vụ vận chuyển quốc tế, dịch vụ giao nhận khai Hải Quan
@@ -112,14 +112,14 @@ const About = () => {
         <div className="about__bottom">
           <div className="about__bottom-top flex">
             <img src="./images/about2.png" className="w-1/2 h-80" alt="" />
-            <h2 className="about__right-title flex justify-center items-center w-full">
+            <h2 className="about__right-title flex justify-center items-center w-1/2">
               Vì sao nên chọn chúng tôi?
             </h2>
           </div>
-          <div className="about__bottom-list p-4">
+          <div className="about__bottom-list px-4 py-8">
             <div className="flex about__item-group pb-8">
               <div
-                className="flex items-center w-1/2 pr-6"
+                className="bottom-item flex items-center w-1/2 pr-6"
                 data-aos="fade-right"
                 data-aos-once="true"
               >
@@ -135,7 +135,7 @@ const About = () => {
                 </div>
               </div>
               <div
-                className="item__dark flex items-center w-1/2 pl-6"
+                className="bottom-item item__dark flex items-center w-1/2 pl-6"
                 data-aos="fade-left"
                 data-aos-once="true"
               >
@@ -153,7 +153,7 @@ const About = () => {
             </div>
             <div className="flex about__item-group pb-8">
               <div
-                className="item__dark flex items-center w-1/2 pr-6"
+                className="bottom-item item__dark item__odd flex items-center w-1/2 pr-6"
                 data-aos="fade-right"
                 data-aos-once="true"
               >
@@ -169,7 +169,7 @@ const About = () => {
                 </div>
               </div>
               <div
-                className=" flex items-center w-1/2 pl-6"
+                className="bottom-item item__even flex items-center w-1/2 pl-6"
                 data-aos="fade-left"
                 data-aos-once="true"
               >
@@ -187,7 +187,7 @@ const About = () => {
             </div>{" "}
             <div className="flex about__item-group pb-8">
               <div
-                className="flex items-center w-1/2 pr-6"
+                className="bottom-item flex items-center w-1/2 pr-6"
                 data-aos="fade-right"
                 data-aos-once="true"
               >
@@ -203,7 +203,7 @@ const About = () => {
                 </div>
               </div>
               <div
-                className="item__dark flex items-center w-1/2 pl-6"
+                className="bottom-item item__dark flex items-center w-1/2 pl-6"
                 data-aos="fade-left"
                 data-aos-once="true"
               >

@@ -1,5 +1,6 @@
 .navbar {
   z-index: 999;
+  background-color: #fff;
 }
 .navbar__menu-list .active {
   color: #333333;
@@ -20,20 +21,7 @@
   font-weight: 480;
   font-size: 20px;
 }
-
-.navbar__menu-link:after {
-  position: absolute;
-  content: "";
-  left: 10px;
-  bottom: 6px;
-  width: 0;
-  border-bottom: 2px solid #00adef;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s ease;
-}
-
-.navbar__list-language {
+y .navbar__list-language {
   animation: navbarLanguage ease-in 0.2s;
 }
 

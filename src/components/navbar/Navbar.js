@@ -4,11 +4,16 @@ import $ from "jquery";
 import "./Navbar.css";
 const Navbar = () => {
   const [showLanguage, setShowLanguage] = useState("hidden");
+  const [showHiddenMenu, setShowHiddenMenu] = useState("");
   const [active, setActive] = useState("");
   const handleshowLanguage = () => {
     showLanguage === "hidden"
       ? setShowLanguage("navbar__list-language")
       : setShowLanguage("hidden");
+  };
+
+  const handleShowMenu = () => {
+    showHiddenMenu === "" ? setShowHiddenMenu("active") : setShowHiddenMenu("");
   };
 
   useEffect(() => {
@@ -22,7 +27,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="navbar fixed top-0 left-0 right-0 shadow-sm">
+    <div className="navbar fixed top-0 left-0 right-0 shadow-lg">
       <div className="bg-white flex items-center justify-between px-4 pt-4 py-2 ">
         <div className="navbar__left mr-20">
           <Link to="/">
@@ -50,10 +55,10 @@ const Navbar = () => {
               <img src="./images/vi-vn.png" width="20" alt="" />
               <i className="mx-0.5 fad fa-caret-down"></i>
             </button>
-            <button className="btn-menu px-3">
+            <button className="btn-menu px-3" onClick={handleShowMenu}>
               <i class="fas fa-bars"></i>
             </button>
-            <input type="checkbox" id="check" />
+
             <div
               className={`${showLanguage} absolute z-10 bg-gray-50 w-32 top-8 rounded-lg right-0 shadow`}
             >
@@ -90,13 +95,6 @@ const Navbar = () => {
             >
               <i className="mr-0.5 fad fa-clone"></i>Dịch vụ
             </Link>
-
-            {/* <Link
-            to="/customer"
-            className="navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900"
-          >
-            <i className="mr-0.5 fad fa-user-friends"></i>Trải nghiệm khách hàng
-          </Link> */}
             <Link
               to="/about"
               className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900`}
@@ -115,38 +113,46 @@ const Navbar = () => {
             >
               <i className="mr-0.5 fad fa-newspaper"></i>Tin tức
             </Link>
-            {/* <Link
-            to="/contact"
-            className="navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900"
-          >
-            <i className="mr-0.5 fad fa-phone-square"></i>Liên hệ
-          </Link> */}
           </div>
         </div>
       </div>
 
       {/* Menu mobible */}
-      {/* <div className="nav-btn">
-        <div className="nav-links">
+      <div className={`nav-btn ${showHiddenMenu}`}>
+        <div id="sidebar" className={`${showHiddenMenu}`}>
+          <button className="toggle-btn" onClick={handleShowMenu}>
+            <i class="fal fa-times"></i>
+          </button>
           <ul>
-            <Link to="/" className="nav-link">
-              <li>Home</li>
+            <Link to="/" className="nav-link" onClick={handleShowMenu}>
+              <li>
+                <i className="fad fa-home"></i>Home
+              </li>
             </Link>
-            <Link to="/service" className="nav-link">
-              <li> Dịch Vụ</li>
+            <Link to="/service" className="nav-link" onClick={handleShowMenu}>
+              <li>
+                {" "}
+                <i className="mr-0.5 fad fa-clone"></i>Dịch vụ
+              </li>
             </Link>
-            <Link to="/about" className="nav-link">
-              <li> Về Chúng Tôi</li>
+            <Link to="/about" className="nav-link" onClick={handleShowMenu}>
+              <li>
+                <i className="mr-0.5 fad fa-address-card"></i>Về chúng tôi
+              </li>
             </Link>
-            <Link to="/price" className="nav-link">
-              <li> Báo Giá</li>
+            <Link to="/price" className="nav-link" onClick={handleShowMenu}>
+              <li>
+                <i className="mr-0.5 fad fa-dollar-sign"></i>Báo giá
+              </li>
             </Link>
-            <Link to="/news" className="nav-link">
-              <li> Tin Tức</li>
+            <Link to="/news" className="nav-link" onClick={handleShowMenu}>
+              <li>
+                <i className="mr-0.5 fad fa-newspaper"></i>Tin tức
+              </li>
             </Link>
           </ul>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

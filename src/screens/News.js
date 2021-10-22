@@ -15,11 +15,7 @@ const News = () => {
   return (
     <div className="news">
       <div className="news__banner">
-        <div
-          className="news-main-content"
-          data-aos="fade-right"
-          data-aos-once="true"
-        >
+        <div className="news-main-content">
           <h2>Tin tức mới nhất về thị trường logistics thế giới</h2>
           <h3>Cổng tin tức về thị trường logistics</h3>
 
@@ -52,11 +48,7 @@ const News = () => {
             </h3>
           </div>
         </div>
-        <div
-          className="news-sub-content"
-          data-aos="fade-left"
-          data-aos-once="true"
-        >
+        <div className="news-sub-content">
           <div className="hot-topic">
             <img src="images/news1.png" alt="" />
             <div className="hot-topic-content">
@@ -131,11 +123,7 @@ const News = () => {
         </div>
       </div>
       <div className="news__main grid">
-        <div
-          className="main-container-left"
-          data-aos="fade-right"
-          data-aos-once="true"
-        >
+        <div className="main-container-left">
           <h2 className="text-2xl font-medium">Tin Tức Hot</h2>
           <div className="container-top-left">
             <article>
@@ -187,7 +175,7 @@ const News = () => {
         </div>
         <div className="main-container-right">
           <h2 className="text-2xl font-medium">Tin Tức Mới Nhất</h2>
-          <article data-aos="fade-left" data-aos-once="true">
+          <article>
             <h4>just in </h4>
             <div>
               <h2>
@@ -204,7 +192,7 @@ const News = () => {
             </div>
             <img src="images/img1.png" alt="" />
           </article>
-          <article data-aos="fade-left" data-aos-once="true">
+          <article>
             <h4>just in </h4>
             <div>
               <h2>The best outdoor games to play with your family</h2>
@@ -218,7 +206,7 @@ const News = () => {
             </div>
             <img src="images/img2.png" alt="" />
           </article>
-          <article data-aos="fade-left" data-aos-once="true">
+          <article>
             <h4>just in </h4>
             <div>
               <h2>
@@ -235,7 +223,7 @@ const News = () => {
             </div>
             <img src="images/img3.png" alt="" />
           </article>
-          <article data-aos="fade-left" data-aos-once="true">
+          <article>
             <h4>just in </h4>
             <div>
               <h2>
@@ -252,7 +240,7 @@ const News = () => {
             </div>
             <img src="images/img4.png" alt="" />
           </article>
-          <article data-aos="fade-left" data-aos-once="true">
+          <article>
             <h4>just in </h4>
             <div>
               <h2>

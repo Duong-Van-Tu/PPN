@@ -40,7 +40,11 @@ const Banner = () => {
             key={index}
             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
           >
-            <img src={`./images/img${index + 1}.png`} alt="" />
+            <img
+              src={`images/img${index + 1}.png`}
+              className="h-full w-full object-cover"
+              alt=""
+            />
           </div>
         );
       })}

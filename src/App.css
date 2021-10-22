@@ -89,18 +89,17 @@ html {
 }
 
 .service__card {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 32px;
+  display: flex;
   background-image: linear-gradient(#00daf5, #0083eb);
+  height: 400px;
 }
 
 .service__card img {
-  height: 380px;
-  width: 100%;
+  height: 400px;
+  width: 50%;
 }
 
-.service__card img .service__intro-paragraph {
+.service__card .service__intro-paragraph {
   font-size: 16px;
   align-items: justify;
   font-weight: 500;
@@ -385,9 +384,12 @@ html {
 }
 
 /* About */
-
+.about__intro img {
+  width: 40%;
+}
 .about__intro-right {
-  height: 320px;
+  height: 340px;
+  width: 60%;
   background-image: linear-gradient(#0080e8, #98f3fd);
 }
 .about__intro-title {
@@ -427,14 +429,14 @@ html {
   font-weight: 600;
   background: #cdc2ae;
   position: relative;
-  padding: 21px 20px;
+  padding: 21px 30px;
 }
 
 .item-text-1::after {
   position: absolute;
   content: "";
   top: 0;
-  right: 0;
+  right: -1px;
   height: 3px;
   border-width: 35px;
   border-style: solid;
