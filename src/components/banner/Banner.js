@@ -62,7 +62,7 @@ const Banner = () => {
             <div className="text-center pb-4 text-3xl font-medium">
               Giao Nhận Vận Tải & Logistics{" "}
             </div>
-            <div className="banner-slogan-text text-3xl font-bold">
+            <div className="banner-slogan-text text-center text-3xl font-bold">
               Nhanh Chóng - Chuyên Nghiệp - Linh Hoạt - Hiệu Quả
             </div>
           </div>

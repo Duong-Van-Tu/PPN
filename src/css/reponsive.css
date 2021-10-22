@@ -1,5 +1,20 @@
 /* PC */
 @media (min-width: 64em) {
+  .btn-menu {
+    display: none;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .nav-btn {
+    display: none;
+  }
 }
 
 /* MOBILE && TABLET */
@@ -8,6 +23,10 @@
 
 /* TABLET */
 @media (min-width: 46.25em) and (max-width: 64em) {
+  .banner-top {
+    display: none;
+  }
+
   .navbar__menu-list {
     display: none;
   }
@@ -19,14 +38,6 @@
   .home__banner {
     height: 60vh;
   }
-
-  .banner-slogan-text {
-    font-size: 32px;
-  }
-  .banner-slogan {
-    display: none;
-  }
-
   .navbar__info-item {
     flex-direction: column;
   }
@@ -41,6 +52,136 @@
 
   .navbar__left {
     margin-right: 10px;
+  }
+  .navbar__list-language {
+    right: 74px;
+    top: 68px;
+  }
+
+  .navbar_hotline {
+    font-weight: 550 !important;
+    font-size: 22px !important;
+  }
+
+  .navbar__right-info {
+    justify-content: space-between;
+  }
+
+  .btn-menu {
+    font-size: 50px;
+    padding: 2px 16px;
+  }
+
+  .navbar__btn-language {
+    padding: 10px;
+  }
+
+  .navbar__list-language {
+    width: 178px;
+    padding: 8px;
+  }
+  .navbar__btn-language img {
+    width: 56px;
+  }
+  .navbar__btn-language i {
+    font-size: 30px;
+  }
+
+  .navbar__language-item {
+    padding: 16px;
+  }
+
+  .navbar__language-item img {
+    width: 30px;
+  }
+
+  .navbar__language-item span {
+    font-size: 22px;
+  }
+
+  .navbar {
+    height: 180px;
+  }
+
+  .navbar__left img {
+    height: 116px;
+    padding: 4px 0;
+  }
+
+  .nav-btn {
+    position: fixed;
+    display: flex;
+    top: 140px;
+    left: 0;
+    right: 0;
+    z-index: 9999999999;
+    height: 572px;
+    background-color: #69bde7;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: 0.65s; */
+  }
+
+  #check:checked ~ .nav-btn {
+    transform: translateX(0);
+  }
+
+  #check:checked ~ .nav-btn .nav-link {
+    animation: animation 0.5s ease forwards var(--i);
+  }
+
+  .nav-links {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 22px;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-size: 30px;
+    transition: 0.5s;
+    font-weight: 480;
+  }
+
+  #check {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    z-index: 90000;
+    cursor: pointer;
+    opacity: 0;
+    background: red;
+    z-index: 99999;
+    display: none;
+  }
+
+  @keyframes animation {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 }
 

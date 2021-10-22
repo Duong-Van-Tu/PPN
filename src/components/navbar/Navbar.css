@@ -1,8 +1,9 @@
 .navbar {
   z-index: 999;
 }
-.navbar__menu-list {
-  font-weight: 600;
+.navbar__menu-list .active {
+  color: #333333;
+  background-color: #8df3fe;
 }
 
 .navbar__menu-link:hover:after {
@@ -15,13 +16,9 @@
   color: #004080;
 }
 
-.navbar__right-email::after {
-  content: "";
-  position: absolute;
-  border-right: 1px solid rgba(0, 0, 0, 0.7);
-  height: 18px;
-  left: 0;
-  top: 4px;
+.navbar__menu-link {
+  font-weight: 480;
+  font-size: 20px;
 }
 
 .navbar__menu-link:after {
