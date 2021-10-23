@@ -467,6 +467,10 @@ html {
   background: #674a2c;
 }
 
+.footer__social p {
+  margin: 0;
+}
+
 /* .main {
   width: 500px;
   height: 500px;

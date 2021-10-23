@@ -55,8 +55,8 @@ const Navbar = () => {
               <img src="./images/vi-vn.png" width="20" alt="" />
               <i className="mx-0.5 fad fa-caret-down"></i>
             </button>
-            <button className="btn-menu px-3" onClick={handleShowMenu}>
-              <i class="fas fa-bars"></i>
+            <button className="btn-menu" onClick={handleShowMenu}>
+            <i class="fal fa-bars"></i>
             </button>
 
             <div
@@ -121,7 +121,7 @@ const Navbar = () => {
       <div className={`nav-btn ${showHiddenMenu}`}>
         <div id="sidebar" className={`${showHiddenMenu}`}>
           <button className="toggle-btn" onClick={handleShowMenu}>
-            <i class="fal fa-times"></i>
+          <i class="fal fa-times"></i>
           </button>
           <ul>
             <Link to="/" className="nav-link" onClick={handleShowMenu}>

@@ -72,7 +72,7 @@
   }
 
   .btn-menu {
-    font-size: 50px;
+    font-size: 40px;
     padding: 2px 16px;
   }
 
@@ -824,9 +824,8 @@
 
   /* footer */
   .footer {
-    height: 50vh !important;
+    height: 40vh !important;
     flex-direction: column-reverse;
-    justify-content: flex-end !important;
   }
 
   .footer__support {
@@ -834,8 +833,16 @@
   }
 
   .footer__contact {
-    margin-top: 45px;
+    margin-top: 20px;
   }
+  .footer__social {
+    top: 0 !important;
+  }
+
+  .footer__contact-title {
+    font-size: 18px !important;
+  }
+
   .footer__contact,
   .footer__social {
     width: 100% !important;
