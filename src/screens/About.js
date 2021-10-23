@@ -36,7 +36,7 @@ const About = () => {
   return (
     <div className="about">
       <div className="about__banner h-96">
-        <div className="relative h-96 overflow-hidden">
+        <div className="about__banner-slider relative h-96 overflow-hidden">
           {services.map((data, index) => {
             return (
               <div
@@ -51,14 +51,17 @@ const About = () => {
                   <h1 className="service__slider-title relative">
                     {data.title}
                   </h1>
-                  <button className="btn my-4">
-                    Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
-                  </button>
+                  <a href="#sea-way">
+                    <button className="btn my-4">
+                      Chi tiết{" "}
+                      <i class="fad fa-chevron-double-right text-xs"></i>
+                    </button>
+                  </a>
                 </div>
-                <div className="w-2/3 h-96">
+                <div className="service__slider-right w-2/3">
                   <img
                     src={`./images/img${index + 1}.png`}
-                    className="w-full object-cover"
+                    className="w-full h-full object-cover"
                     alt=""
                   />
                 </div>
@@ -74,18 +77,23 @@ const About = () => {
               ></div>
             ))}
           </div>
+
+          <div className="container-dots">
+            {Array.from({ length: 5 }).map((item, index) => (
+              <div
+                onClick={() => moveDot(index + 1)}
+                className={slideIndex === index + 1 ? "dot active" : "dot"}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="about__main mx-16 my-12">
         <div className="about__intro flex">
-          <img
-            src="./images/about1.png"
-            className="rounded-l-lg"
-            alt=""
-          />
+          <img src="./images/about1.png" className="rounded-l-lg" alt="" />
           <div className="about__intro-right rounded-r-lg">
             <h2 className="about__intro-title">Về Chúng Tôi</h2>
-            <div className="text-justify px-4 text-lg font-medium">
+            <div className="text-justify pb-4 px-4 text-lg font-medium">
               <p>
                 Công ty <b> TNHH Giao Nhận Vận Tải PPN </b> hoạt động trong lĩnh
                 vực dịch vụ vận chuyển quốc tế, dịch vụ giao nhận khai Hải Quan

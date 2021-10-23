@@ -91,7 +91,7 @@ html {
 .service__card {
   display: flex;
   background-image: linear-gradient(#00daf5, #0083eb);
-  height: 400px;
+  /* height: 400px; */
 }
 
 .service__card img {
@@ -108,10 +108,6 @@ html {
   background: #294461;
 }
 /* Price */
-.price .sidebar {
-  background: #294461;
-}
-
 .sidebar__link:hover {
   background-color: #0079ea;
 }
@@ -125,6 +121,12 @@ html {
 
 .price__form {
   background: #3877ce;
+  width: 75%;
+}
+
+.price___sidebar {
+  width: 25%;
+  background: #294461;
 }
 
 /* news */
@@ -388,7 +390,6 @@ html {
   width: 40%;
 }
 .about__intro-right {
-  height: 340px;
   width: 60%;
   background-image: linear-gradient(#0080e8, #98f3fd);
 }
@@ -465,3 +466,9 @@ html {
 .item__dark .about__item {
   background: #674a2c;
 }
+
+/* .main {
+  width: 500px;
+  height: 500px;
+  background: red;
+} */

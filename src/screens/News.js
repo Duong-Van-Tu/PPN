@@ -255,7 +255,7 @@ const News = () => {
                 Đọc thêm <span>&gt;&gt;</span>
               </Link>
             </div>
-            <img src="images/img5.png" alt="" />
+            <img src="images/news5.png" alt="" />
           </article>
         </div>
       </div>

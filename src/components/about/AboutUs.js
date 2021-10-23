@@ -13,7 +13,7 @@ const AboutUs = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
       </div>
-      <div className="home__about-introduce">
+      <div className="home__about-introduce ml-4">
         <div className="home__about-title pb-4">Về Chúng tôi</div>
         <div className="home__about-paragraph">
           <p>

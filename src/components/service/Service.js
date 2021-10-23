@@ -39,7 +39,7 @@ export default function Service() {
     };
 
   return (
-    <div className="mx-16 my-4">
+    <div className="home-service mx-16 my-4">
       <div className="home-service-title relative mt-8 mx-4">
         Dịch Vụ Nổi Bật
       </div>

@@ -104,7 +104,7 @@
   }
 
   .navbar__left img {
-    height: 120px;
+    height: 60px;
     padding: 4px 0;
   }
 
@@ -174,8 +174,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-color: #666;
   }
   #sidebar .toggle-btn i {
@@ -198,6 +198,9 @@
   }
 
   /* about */
+  .home__about-staff {
+    padding: 0 !important;
+  }
   .home__about-staff iframe {
     display: none;
   }
@@ -234,6 +237,10 @@
 
   .service__intro-title {
     align-items: center;
+  }
+
+  .service__main-intro p {
+    margin: 0 16px;
   }
 
   .service__card-text {
@@ -316,17 +323,6 @@
 
   .price {
     height: 60vh;
-  }
-  .price__form form {
-    width: 450px;
-  }
-
-  .sidebar {
-    grid-column: span 3 / span 3;
-  }
-
-  .price__form {
-    grid-column: span 6 / span 6;
   }
 
   .sidebar__link {
@@ -520,9 +516,6 @@
     display: none;
   }
 
-  .home__about-paragraph {
-    font-size: 22px;
-  }
   /* Footer */
   .footer {
     height: 30vh !important;
@@ -632,21 +625,13 @@
 
   /* Price */
 
-  .price {
-    height: 60vh;
+  .price___sidebar {
+    width: 40%;
   }
   .price__form form {
-    width: 450px;
+    padding: 0 16px;
+    margin: 40px 20px;
   }
-
-  .sidebar {
-    grid-column: span 3 / span 3;
-  }
-
-  .price__form {
-    grid-column: span 6 / span 6;
-  }
-
   .sidebar__link {
     padding: 16px 0;
     font-size: 18px;
@@ -655,8 +640,14 @@
 
 /* MOBILE */
 @media (max-width: 46.1875em) {
+  .btn {
+    width: 110px;
+  }
+  .main-wrap {
+    margin-top: 14px;
+  }
   .navbar {
-    height: 132px;
+    height: 110px;
   }
   .navbar__btn-language,
   .navbar__info-item {
@@ -676,5 +667,177 @@
 
   .navbar__right {
     flex: 0;
+  }
+
+  .nav-link li {
+    font-size: 24px;
+  }
+
+  #sidebar ul {
+    margin-top: 60px;
+  }
+
+  #sidebar.active {
+    width: 100%;
+  }
+
+  #sidebar {
+    top: 0;
+  }
+
+  .home-service {
+    margin: 10px 30px;
+  }
+
+  .about__banner,
+  .about__banner-slider,
+  .service__slider-left,
+  .service__slider-right,
+  .service__banner-slider,
+  .service__banner {
+    height: 18rem;
+  }
+
+  .service-description {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .home-service-title {
+    margin-top: 40px;
+  }
+
+  .home__about {
+    margin: 0 30px;
+  }
+
+  .home__about-staff {
+    padding: 0;
+  }
+
+  .home__about-paragraph {
+    font-size: 20px;
+  }
+
+  .nav-link {
+    padding: 0 20px;
+  }
+
+  .home__banner {
+    height: 40vh;
+  }
+
+  .banner-slogan {
+    top: 20px !important;
+  }
+
+  .slogan-top {
+    font-size: 20px !important;
+  }
+
+  .slogan-bottom {
+    font-size: 18px !important;
+  }
+
+  .home-contact-title {
+    margin: 0;
+  }
+
+  .service__main {
+    margin: 20px 0;
+  }
+
+  .service__intro-title {
+    font-size: 30px;
+  }
+
+  .service__slider-right,
+  .service__slider-left {
+    width: 50%;
+  }
+
+  .service__slider-title {
+    font-size: 16px;
+  }
+
+  .service__slider-title::after {
+    width: 90px;
+  }
+
+  /* About */
+  .about__main {
+    margin: 34px 20px;
+  }
+  .about__bottom-list {
+    margin-bottom: 30px;
+    padding: 0 2px;
+  }
+
+  .bottom-item {
+    padding: 12px 2px 0;
+  }
+
+  .about__item-1 {
+    width: 70px;
+    height: 70px;
+  }
+
+  .item-1-number {
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .item-text-1 {
+    padding: 14px 15px;
+    font-size: 12px;
+  }
+
+  .item-text-1::before {
+    top: -18px;
+    left: -72px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .item-text-1::after {
+    border-width: 26px;
+    right: -1px;
+  }
+
+  /* Price */
+  .price {
+    height: 85vh;
+  }
+  .price__form {
+    width: 100%;
+  }
+
+  .price__form form {
+    margin: 40px 20px;
+    padding: 10px 20px;
+  }
+  .price___sidebar {
+    display: none;
+  }
+
+  /* footer */
+  .footer {
+    height: 50vh !important;
+    flex-direction: column-reverse;
+    justify-content: flex-end !important;
+  }
+
+  .footer__support {
+    display: none;
+  }
+
+  .footer__contact {
+    margin-top: 45px;
+  }
+  .footer__contact,
+  .footer__social {
+    width: 100% !important;
   }
 }

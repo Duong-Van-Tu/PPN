@@ -5,8 +5,8 @@ const Price = () => {
     window.scrollTo(0, 0);
   });
   return (
-    <div className="price md:h-screen md:grid md:grid-cols-9">
-      <section className="sidebar bg-green-400 md:col-span-2">
+    <div className="price flex">
+      <section className="price___sidebar">
         <div className="py-4 px-2">
           <div className="text-white mt-1">
             <div className="px-2.5 py-1.5 flex items-center space-x-3 rounded-md">
@@ -86,9 +86,9 @@ const Price = () => {
         </div>
         <div className="border-t border-gray-700 my-2" />
       </section>
-      <main className="price__form md:col-span-7">
-        <form className="w-full max-w-4xl mx-auto py-6 bg-gray-200 my-4 px-4 shadow-lg rounded-xl mt-8">
-          <h1 className="text-center text-3xl text-gray-700 pb-2">
+      <main className="price__form">
+        <form className=" py-6 bg-gray-200 shadow-lg rounded-xl mx-16 mt-8 mb-16">
+          <h1 className="text-center text-3xl text-gray-700 pb-2 font-medium">
             Nhận Báo Giá
           </h1>
           <div className="flex py-2">

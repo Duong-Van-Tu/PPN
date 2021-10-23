@@ -29,56 +29,54 @@ const Service = () => {
 
   return (
     <div className="service">
-      <div className="service__banner">
-        <div className="service__banner h-96">
-          <div className="relative h-96 overflow-hidden">
-            {services.map((data, index) => {
-              return (
-                <div
-                  key={data.id}
-                  className={
-                    slideIndex === index + 1
-                      ? "slide active-anim flex"
-                      : "slide flex"
-                  }
-                >
-                  <div className="service__slider-left h-96 w-1/3 flex flex-col items-center justify-center">
-                    <h1 className="service__slider-title relative">
-                      {data.title}
-                    </h1>
-                    <a href="#sea-way">
-                      <button className="btn my-4">
-                        Chi tiết{" "}
-                        <i class="fad fa-chevron-double-right text-xs"></i>
-                      </button>
-                    </a>
-                  </div>
-                  <div className="service__slider-right w-2/3 h-96">
-                    <img
-                      src={`./images/img${index + 1}.png`}
-                      className="w-full object-cover"
-                      alt=""
-                    />
-                  </div>
+      <div className="service__banner h-96">
+        <div className="service__banner-slider relative h-96 overflow-hidden">
+          {services.map((data, index) => {
+            return (
+              <div
+                key={data.id}
+                className={
+                  slideIndex === index + 1
+                    ? "slide active-anim flex"
+                    : "slide flex"
+                }
+              >
+                <div className="service__slider-left h-96 w-1/3 flex flex-col items-center justify-center">
+                  <h1 className="service__slider-title relative">
+                    {data.title}
+                  </h1>
+                  <a href="#sea-way">
+                    <button className="btn my-4">
+                      Chi tiết{" "}
+                      <i class="fad fa-chevron-double-right text-xs"></i>
+                    </button>
+                  </a>
                 </div>
-              );
-            })}
+                <div className="service__slider-right w-2/3">
+                  <img
+                    src={`./images/img${index + 1}.png`}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
+                </div>
+              </div>
+            );
+          })}
 
-            <div className="container-dots">
-              {Array.from({ length: 5 }).map((item, index) => (
-                <div
-                  onClick={() => moveDot(index + 1)}
-                  className={slideIndex === index + 1 ? "dot active" : "dot"}
-                ></div>
-              ))}
-            </div>
+          <div className="container-dots">
+            {Array.from({ length: 5 }).map((item, index) => (
+              <div
+                onClick={() => moveDot(index + 1)}
+                className={slideIndex === index + 1 ? "dot active" : "dot"}
+              ></div>
+            ))}
           </div>
         </div>
       </div>
       <div className="service__main mx-8 mt-8 pb-8">
         <div className="service__main-intro">
           <h2>Dịch Vụ Chính</h2>
-          <p>
+          <p className="text-justify">
             Công ty chúng tôi tự hào mang đến những dịch vụ Logistics toàn diện,
             thiết kế và tư vấn phù hợp nhu cầu khách hàng. Với 18 văn phòng trải
             khắp Việt Nam, cùng đội ngũ đối tác toàn thế giới, chúng tôi luôn
@@ -106,7 +104,11 @@ const Service = () => {
                 Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
               </Link>
             </div>
-            <img src="./images/img1.png" className="h-full rounded-tr-lg" alt="" />
+            <img
+              src="./images/img1.png"
+              className="h-full rounded-tr-lg"
+              alt=""
+            />
           </div>
           <div className="service__card" id="sea-way">
             <img src="./images/img2.png" className="h-full" alt="" />
@@ -151,16 +153,19 @@ const Service = () => {
             <img src="./images/img3.png" className="h-ful" alt="" />
           </div>
           <div className="service__card rounded-b-lg">
-            <img src="./images/img4.png" className="h-full rounded-bl-lg" alt="" />
+            <img
+              src="./images/img4.png"
+              className="h-full rounded-bl-lg"
+              alt=""
+            />
             <div className="w-1/2 p-3 service__card-text">
               <h2 className="service__intro-title">Khai Thuế Hải Quan</h2>
               <p className="service__intro-paragraph p-2 text-justify">
-                Xóa bỏ mọi nỗi lo về quy trình giấy tờ, tiết kiệm thời gian với
-                dịch vụ Khai thuê Hải Quan của chúng tôi! Sở hữu đội ngũ chuyên
-                gia đông đảo – giàu kinh nghiệm, <b> PPN LOGISTICS </b>
-                có thể xử lý được toàn bộ các giấy tờ, thủ tục liên quan đến Hải
-                quan và giấy phép xuất nhập khẩu trong thời gian ngắn nhất, cùng
-                mức phí hấp dẫn nhất.
+                <b>PPN LOGISTICS TRANSPORT </b> hỗ trợ tư vấn khách hàng các
+                loại tài liệu xuất nhập khẩu, các quy định về hải quan địa
+                phương, trách nhiệm và thuế. Chúng tôi luôn sẵn sàng làm việc
+                với các cơ quan liên quan để tìm ra các giải pháp tốt nhất để
+                thông quan cho lô hàng một cách nhanh nhất và kịp thời
               </p>
               <Link to="/service" className="btn service__btn">
                 Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
