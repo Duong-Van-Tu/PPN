@@ -35,7 +35,7 @@ const AboutUs = () => {
           </p>
         </div>
         <Link to="/about">
-          <button className="home__about-btn">
+          <button className="btn home__about-btn">
             Xem thêm <i className="fad fa-chevron-double-right text-xs"></i>
           </button>
         </Link>

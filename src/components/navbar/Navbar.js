@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar fixed top-0 left-0 right-0 shadow-lg">
-      <div className="bg-white flex items-center justify-between px-4 pt-4 py-2 ">
+      <div className="navbar-top bg-white flex items-center justify-between px-4 pt-4 py-2 ">
         <div className="navbar__left mr-20">
           <Link to="/">
             <img className="w-96" src="./images/logo.png" alt="logo" />
