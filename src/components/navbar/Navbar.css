@@ -18,7 +18,7 @@
 }
 
 .navbar__menu-link {
-  font-weight: 480;
+  font-weight: 500;
   font-size: 20px;
 }
 y .navbar__list-language {
@@ -31,7 +31,7 @@ y .navbar__list-language {
 
 .navbar_hotline {
   font-size: 18px;
-  font-weight: 450;
+  font-weight: 500;
 }
 
 @keyframes navbarLanguage {

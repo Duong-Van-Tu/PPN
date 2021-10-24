@@ -124,13 +124,13 @@ const About = () => {
               Vì sao nên chọn chúng tôi?
             </h2>
           </div>
-          <div className="about__bottom-list px-4 py-8">
+          <div
+            className="about__bottom-list px-4 py-8"
+            data-aos="fade-left"
+            data-aos-once="true"
+          >
             <div className="flex about__item-group pb-8">
-              <div
-                className="bottom-item flex items-center w-1/2 pr-6"
-                data-aos="fade-right"
-                data-aos-once="true"
-              >
+              <div className="bottom-item flex items-center w-1/2 pr-6">
                 <div className="about__item rounded-full">
                   <div className="about__item-1 w-24 h-24 flex justify-center items-center">
                     <div className="item-1-number w-20 h-20 rounded-full font-medium text-5xl flex justify-center items-center">
@@ -142,11 +142,7 @@ const About = () => {
                   Tốc độ nhanh chóng, vượt trội
                 </div>
               </div>
-              <div
-                className="bottom-item item__dark flex items-center w-1/2 pl-6"
-                data-aos="fade-left"
-                data-aos-once="true"
-              >
+              <div className="bottom-item item__dark flex items-center w-1/2 pl-6">
                 <div className="about__item rounded-full">
                   <div className="about__item-1 w-24 h-24 flex justify-center items-center">
                     <div className="item-1-number w-20 h-20 rounded-full font-medium text-5xl flex justify-center items-center">
@@ -159,12 +155,12 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="flex about__item-group pb-8">
-              <div
-                className="bottom-item item__dark item__odd flex items-center w-1/2 pr-6"
-                data-aos="fade-right"
-                data-aos-once="true"
-              >
+            <div
+              className="flex about__item-group pb-8"
+              data-aos="fade-right"
+              data-aos-once="true"
+            >
+              <div className="bottom-item item__dark item__odd flex items-center w-1/2 pr-6">
                 <div className="about__item rounded-full">
                   <div className="about__item-1 w-24 h-24 flex justify-center items-center">
                     <div className="item-1-number w-20 h-20 rounded-full font-medium text-5xl flex justify-center items-center">
@@ -176,11 +172,7 @@ const About = () => {
                   Phục vụ tận tâm, nâng tầm chất lượng
                 </div>
               </div>
-              <div
-                className="bottom-item item__even flex items-center w-1/2 pl-6"
-                data-aos="fade-left"
-                data-aos-once="true"
-              >
+              <div className="bottom-item item__even flex items-center w-1/2 pl-6">
                 <div className="about__item rounded-full">
                   <div className="about__item-1 w-24 h-24 flex justify-center items-center">
                     <div className="item-1-number w-20 h-20 rounded-full font-medium text-5xl flex justify-center items-center">
@@ -193,12 +185,12 @@ const About = () => {
                 </div>
               </div>
             </div>{" "}
-            <div className="flex about__item-group pb-8">
-              <div
-                className="bottom-item flex items-center w-1/2 pr-6"
-                data-aos="fade-right"
-                data-aos-once="true"
-              >
+            <div
+              className="flex about__item-group pb-8"
+              data-aos="fade-left"
+              data-aos-once="true"
+            >
+              <div className="bottom-item flex items-center w-1/2 pr-6">
                 <div className="about__item rounded-full">
                   <div className="about__item-1 w-24 h-24 flex justify-center items-center">
                     <div className="item-1-number w-20 h-20 rounded-full font-medium text-5xl flex justify-center items-center">
@@ -210,11 +202,7 @@ const About = () => {
                   Sẵn sàng giúp đỡ khi có yêu cầu
                 </div>
               </div>
-              <div
-                className="bottom-item item__dark flex items-center w-1/2 pl-6"
-                data-aos="fade-left"
-                data-aos-once="true"
-              >
+              <div className="bottom-item item__dark flex items-center w-1/2 pl-6">
                 <div className="about__item rounded-full">
                   <div className="about__item-1 w-24 h-24 flex justify-center items-center">
                     <div className="item-1-number w-20 h-20 rounded-full font-medium text-5xl flex justify-center items-center">

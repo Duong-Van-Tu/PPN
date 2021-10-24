@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../components/banner/Banner.css";
 import { services } from "../data/data";
 const Service = () => {
@@ -45,7 +44,7 @@ const Service = () => {
                   <h1 className="service__slider-title relative">
                     {data.title}
                   </h1>
-                  <a href="#sea-way">
+                  <a href={`${data.name}`}>
                     <button className="btn my-4">
                       Chi tiết{" "}
                       <i class="fad fa-chevron-double-right text-xs"></i>
@@ -73,7 +72,7 @@ const Service = () => {
           </div>
         </div>
       </div>
-      <div className="service__main mx-8 mt-8 pb-8">
+      <div className="service__main m-8">
         <div className="service__main-intro">
           <h2>Dịch Vụ Chính</h2>
           <p className="text-justify">
@@ -100,9 +99,6 @@ const Service = () => {
                 chúng tôi được đảm bảo chất lượng dịch vụ với mức giá cạnh tranh
                 nhất.
               </p>
-              <Link to="/service" className="btn service__btn">
-                Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
-              </Link>
             </div>
             <img
               src="./images/img1.png"
@@ -110,8 +106,8 @@ const Service = () => {
               alt=""
             />
           </div>
-          <div className="service__card" id="sea-way">
-            <img src="./images/img2.png" className="h-full" alt="" />
+          <div className="service__card">
+            <img src="./images/img2.png" className="h-full w-1/2" alt="" />
             <div className="w-1/2 p-3 service__card-text">
               <h2 className="service__intro-title">Gom Hàng Lẻ LCL</h2>
               <p className="service__intro-paragraph text-justify p-2">
@@ -123,9 +119,6 @@ const Service = () => {
                 đáp ứng tất cả các nhu cầu vận chuyển đa quốc gia hoàn chỉnh cho
                 các lô hàng với khối lượng không đủ một container.
               </p>
-              <Link to="/service" className="btn service__btn">
-                Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
-              </Link>
             </div>
           </div>
           <div className="service__card">
@@ -146,9 +139,6 @@ const Service = () => {
                 <b> PPN LOGISTICS </b>. tự tin mang đến chất lượng dịch vụ hoàn
                 hảo nhất.
               </p>
-              <Link to="/service" className="btn service__btn">
-                Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
-              </Link>
             </div>
             <img src="./images/img3.png" className="h-ful" alt="" />
           </div>
@@ -167,9 +157,6 @@ const Service = () => {
                 với các cơ quan liên quan để tìm ra các giải pháp tốt nhất để
                 thông quan cho lô hàng một cách nhanh nhất và kịp thời
               </p>
-              <Link to="/service" className="btn service__btn">
-                Chi tiết <i class="fad fa-chevron-double-right text-xs"></i>
-              </Link>
             </div>
           </div>
         </main>

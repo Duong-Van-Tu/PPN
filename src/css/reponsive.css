@@ -156,7 +156,7 @@
     height: 100%;
     background: #262626;
     left: -500px;
-    transition: all 0.6s linear;
+    transition: all 0.4s linear;
   }
   #sidebar.active {
     left: 0px;
@@ -229,6 +229,8 @@
   }
 
   .service__card {
+    border-radius: 14px;
+    margin: 32px 12px;
   }
 
   .service__card img {
@@ -510,7 +512,11 @@
   .slogan-bottom {
     font-size: 28px !important;
   }
-
+  /* service */
+  .service-description {
+    font-size: 16px;
+    font-weight: 500;
+  }
   /* about */
   .home__about-staff iframe {
     display: none;
@@ -534,9 +540,6 @@
 
   .footer__contact {
     width: 31% !important;
-  }
-
-  .service__card {
   }
 
   .service__card img {
@@ -686,7 +689,11 @@
   }
 
   .home-service {
-    margin: 10px 30px;
+    margin: 30px;
+  }
+
+  .home__about-introduce {
+    margin: 0;
   }
 
   .about__banner,
@@ -698,15 +705,6 @@
     height: 18rem;
   }
 
-  .service-description {
-    font-size: 16px;
-    font-weight: 500;
-  }
-
-  .home-service-title {
-    margin-top: 40px;
-  }
-
   .home__about {
     margin: 0 30px;
   }
@@ -715,8 +713,22 @@
     padding: 0;
   }
 
+  .home-service-title {
+    margin: 0;
+  }
+
+  .service-description {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
   .home__about-paragraph {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500 !important;
+  }
+
+  .home__about-title {
+    font-size: 32px !important;
   }
 
   .nav-link {
@@ -732,11 +744,11 @@
   }
 
   .slogan-top {
-    font-size: 20px !important;
+    font-size: 16px !important;
   }
 
   .slogan-bottom {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
 
   .home-contact-title {
@@ -768,9 +780,13 @@
   .about__main {
     margin: 34px 20px;
   }
+
+  .about__right-title {
+    font-size: 24px;
+  }
   .about__bottom-list {
     margin-bottom: 30px;
-    padding: 0 2px;
+    padding: 8px 0;
   }
 
   .bottom-item {
@@ -778,27 +794,27 @@
   }
 
   .about__item-1 {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 
   .item-1-number {
-    width: 50px;
-    height: 50px;
-    font-size: 32px;
+    width: 44px;
+    height: 44px;
+    font-size: 30px;
     font-weight: 700;
   }
 
   .item-text-1 {
-    padding: 14px 15px;
+    padding: 12px 13px;
     font-size: 12px;
   }
 
   .item-text-1::before {
-    top: -18px;
-    left: -72px;
-    width: 80px;
-    height: 80px;
+    top: -14px;
+    left: -60px;
+    width: 70px;
+    height: 70px;
   }
 
   .item-text-1::after {
@@ -822,6 +838,10 @@
     display: none;
   }
 
+  /* new */
+  .news-main-content h2 {
+    font-size: 22px;
+  }
   /* footer */
   .footer {
     height: 40vh !important;

@@ -60,7 +60,7 @@ const Navbar = () => {
             </button>
 
             <div
-              className={`${showLanguage} absolute z-10 bg-gray-50 w-32 top-8 rounded-lg right-0 shadow`}
+              className={`${showLanguage} absolute z-10 bg-gray-50 w-32 top-7 rounded-lg right-0 shadow`}
             >
               <div className="navbar__language-item flex py-1 px-4 items-center cursor-pointer hover:bg-gray-200 rounded-t-lg">
                 <img

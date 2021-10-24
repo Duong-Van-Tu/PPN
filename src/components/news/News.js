@@ -41,7 +41,7 @@ const News = () => {
       slidesToScroll: 3,
       initialSlide: 0,
       autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 1024,
