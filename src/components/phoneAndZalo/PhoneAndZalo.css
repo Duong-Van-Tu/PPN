@@ -1,8 +1,10 @@
 .zalo-phone {
-  top: 72%;
+  position: fixed;
   z-index: 5;
+  top: 60%;
 }
-.zalo-img {
+.zalo__link img {
+  width: 60px;
   animation: phonering-alo-circle-img-anim 1s infinite ease-in-out;
 }
 
@@ -18,9 +20,9 @@
 .phonering-alo-ph-circle {
   width: 160px;
   height: 160px;
+  position: absolute;
   top: 20px;
   left: 20px;
-  position: absolute;
   background-color: transparent;
   border-radius: 100% !important;
   border: 2px solid rgba(30, 30, 30, 0.4);

@@ -1,6 +1,5 @@
 import "./App.css";
-import "../src/css/reponsive.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import PhoneAndZalo from "./components/phoneAndZalo/PhoneAndZalo";
 import Footer from "./components/footer/Footer";
@@ -16,13 +15,21 @@ function App() {
   return (
     <Router>
       <Navbar></Navbar>
-      <main className="main-wrap relative top-24">
+      <main className="main-wrap">
         <PhoneAndZalo></PhoneAndZalo>
+
         <Switch>
           <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/service">
+            <Service />
+          </Route> 
+
+          {/* <Route exact path="/about">
             <About />
           </Route>
           <Route exact path="/contact">
@@ -39,10 +46,11 @@ function App() {
           </Route>
           <Route exact path="/service">
             <Service />
-          </Route>
+          </Route> */}
         </Switch>
         <Footer></Footer>
       </main>
+      {/* <div className="h-96 bg-yellow-400"></div> */}
     </Router>
   );
 }

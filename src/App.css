@@ -1,9 +1,54 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
 html {
+  font-size: 62.5%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+/* html::-webkit-scrollbar {
+  width: 1rem;
+} */
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-wrap {
+  position: relative;
+  margin-top: 94px;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #130f40;
+}
+
+.heading span {
+  color: #e67e22;
+}
+
 .slick-prev:before {
   background-color: #980000;
   padding: 2px;
@@ -14,38 +59,46 @@ html {
   padding: 2px;
 }
 
-/* Service */
-.service__slider-left {
-  background-image: linear-gradient(#0080e8, #2a4763);
-  font-size: 32px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.service__slider-title::after {
-  position: absolute;
-  content: "";
-  background: #fff;
-  width: 160px;
-  height: 4px;
-  border-radius: 99px;
-  left: 0;
-  bottom: -2px;
-}
-
 .btn {
-  background: #00adef;
-  border-radius: 8px;
-  padding: 5px 10px 4px;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: white;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #130f40;
+  cursor: pointer;
+  background: none;
+  color: #130f40;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #130f40;
+  z-index: -1;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-clip-path: circle(0% at 0% 5%);
+  clip-path: circle(0% at 0% 5%);
+}
+
+.btn:hover::before {
+  -webkit-clip-path: circle(100%);
+  clip-path: circle(100%);
 }
 
 .btn:hover {
-  background-color: #005baa;
   color: #fff;
 }
+
 .service__banner .slick-slider .slick-next:before {
   display: none;
 }
@@ -84,39 +137,9 @@ html {
   bottom: -2px;
 }
 
-.service {
-  background: #fafafa;
-}
-
-.service__card {
-  display: flex;
-  background-image: linear-gradient(#00daf5, #0083eb);
-  /* height: 400px; */
-}
-
-.service__card img {
-  height: 400px;
-  width: 50%;
-}
-
-.service__card .service__intro-paragraph {
-  font-size: 16px;
-  align-items: justify;
-  font-weight: 500;
-}
-.service__btn {
-  background: #294461;
-}
 /* Price */
 .sidebar__link:hover {
   background-color: #0079ea;
-}
-
-.btn.btn-submit {
-  padding: 4px 40px;
-  font-size: 20px;
-  text-transform: none;
-  font-weight: 400;
 }
 
 .price__form {
@@ -465,10 +488,6 @@ html {
 .item__dark .item-text-1,
 .item__dark .about__item {
   background: #674a2c;
-}
-
-.footer__social p {
-  margin: 0;
 }
 
 /* .main {

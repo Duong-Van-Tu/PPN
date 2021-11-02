@@ -1,10 +1,9 @@
 .footer {
-  height: 40vh;
   display: flex;
   background: rgba(0, 0, 0, 0.8);
   align-items: center;
   justify-content: space-evenly;
-  padding: 0 16px;
+  padding: 18px 10px;
 }
 
 .footer__contact {
@@ -12,7 +11,7 @@
 }
 
 .footer__contact-title {
-  font-size: 20px;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #77eaff;
   padding: 2px 0;
@@ -21,26 +20,30 @@
 .footer__contact-info {
   color: #fff;
   padding: 2px 0;
-  font-size: 16px;
+  font-size: 1.4rem;
 }
 
 .footer__contact-info i {
   padding: 0 4px;
   color: #980000;
-  font-size: 16px;
+  font-size: 1.4rem;
 }
 /* social */
 .footer__social {
   width: 45%;
   text-align: center;
   position: relative;
-  top: 60px;
+  top: 45px;
 }
 
 .social-icon,
 .menu {
   display: flex;
   justify-content: center;
+}
+
+.social-icon__link i {
+  font-size: 2.6rem;
 }
 
 .social-icon__item,
@@ -77,7 +80,7 @@
 .footer__social p {
   color: #fff;
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 300;
 }
 
@@ -86,7 +89,7 @@
 }
 
 .footer__support-title {
-  font-size: 20px;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #77eaff;
   padding: 2px 0;
@@ -95,11 +98,55 @@
 .footer__support-phone {
   color: #fff;
   padding: 2px 0;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: 1.4rem;
 }
 
 .footer__support-phone i {
   color: #75eb50;
   padding: 0 4px;
+}
+
+/* Responsive */
+
+/* PC */
+@media (min-width: 64em) {
+}
+
+/* MOBILE && TABLET */
+@media (max-width: 63.9375em) {
+}
+
+/* TABLET */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+/* MOBILE */
+@media (max-width: 46.1875em) {
+  /* Footer */
+  .footer {
+    height: 40vh !important;
+    flex-direction: column-reverse;
+    padding: 0 10px;
+  }
+
+  .footer__support {
+    display: none;
+  }
+
+  .footer__contact {
+    margin-top: 20px;
+  }
+  .footer__social {
+    top: 0 !important;
+  }
+
+  .footer__contact-title {
+    font-size: 18px !important;
+  }
+
+  .footer__contact,
+  .footer__social {
+    width: 100% !important;
+  }
 }

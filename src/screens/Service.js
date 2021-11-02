@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+import BannerService from "../components/banner/BannerService";
 import "../components/banner/Banner.css";
+import Contact from "../components/contact/Contact";
 import { services } from "../data/data";
 const Service = () => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -28,62 +30,44 @@ const Service = () => {
 
   return (
     <div className="service">
-      <div className="service__banner h-96">
-        <div className="service__banner-slider relative h-96 overflow-hidden">
-          {services.map((data, index) => {
-            return (
-              <div
-                key={data.id}
-                className={
-                  slideIndex === index + 1
-                    ? "slide active-anim flex"
-                    : "slide flex"
-                }
-              >
-                <div className="service__slider-left h-96 w-1/3 flex flex-col items-center justify-center">
-                  <h1 className="service__slider-title relative">
-                    {data.title}
-                  </h1>
-                  <a href={`${data.name}`}>
-                    <button className="btn my-4">
-                      Chi tiết{" "}
-                      <i class="fad fa-chevron-double-right text-xs"></i>
-                    </button>
-                  </a>
-                </div>
-                <div className="service__slider-right w-2/3">
-                  <img
-                    src={`./images/img${index + 1}.png`}
-                    className="w-full h-full object-cover"
-                    alt=""
-                  />
-                </div>
-              </div>
-            );
-          })}
-
-          <div className="container-dots">
-            {Array.from({ length: 5 }).map((item, index) => (
-              <div
-                onClick={() => moveDot(index + 1)}
-                className={slideIndex === index + 1 ? "dot active" : "dot"}
-              ></div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className="service__main m-8">
+      <BannerService></BannerService>
+      <Contact></Contact>
+      {/* <div className="service__main m-8">
         <div className="service__main-intro">
           <h2>Dịch Vụ Chính</h2>
           <p className="text-justify">
-            Công ty chúng tôi tự hào mang đến những dịch vụ Logistics toàn diện,
-            thiết kế và tư vấn phù hợp nhu cầu khách hàng. Với 18 văn phòng trải
-            khắp Việt Nam, cùng đội ngũ đối tác toàn thế giới, chúng tôi luôn
-            cung cấp giải pháp vận chuyển phục vụ xuất nhập khẩu kịp thời và
-            chất lượng nhất.
+            <span className="font-bold">PPN LOGISTICS TRANSPORT </span>
+            hỗ trợ tư vấn khách hàng các loại tài liệu xuất nhập khẩu, các quy
+            định về hải quan địa phương, trách nhiệm và thuế. Chúng tôi luôn sẵn
+            sàng làm việc với các cơ quan liên quan để tìm ra các giải pháp tốt
+            nhất để thông quan cho lô hàng một cách nhanh nhất và kịp thời.
           </p>
         </div>
         <main className="service__container mt-8">
+          <div className="our__services">
+            <h2 className="our__services-title">
+              Chúng tôi sẽ cung cấp cho bạn những gì?
+            </h2>
+            <div className="our__services-content">
+              <img src="./images/about2.png" className="content-left" alt="" />
+              <div className="content-right">
+                Hỗ trợ khai báo và đăng ký hải quan điện tử
+                <br /> Hỗ trợ các giải pháp hải quan cho lô hàng phức tạp
+                <br /> Hỗ trợ tính thuế
+                <br /> Hỗ trợ hoàn thuế và miễn giảm thuế
+                <br /> Hỗ trợ kiểm hóa hàng xuất nhập khẩu
+                <br /> Dịch vụ thông quan biên giới
+                <br /> Dịch vụ hải quan tại cảng đến
+                <br /> Tư vấn giấy phép xuất nhập khẩu
+                <br /> Tư vấn thuế
+                <br /> Tư vấn kiểm dịch: giấy kiểm dịch thực vật, giấy kiểm dịch
+                động vật, hun trùng
+                <br /> Tư vấn chứng từ: chứng nhận nguồn gốc, chứng nhận chất
+                lượng
+                <br /> Tư vấn các yêu cầu cho từng sản phẩm cụ thể
+              </div>
+            </div>
+          </div>
           <div className="service__card rounded-t-lg">
             <div className="w-1/2 p-3 service__card-text">
               <h2 className="service__intro-title">Vận Chuyển Đường Biển</h2>
@@ -160,7 +144,7 @@ const Service = () => {
             </div>
           </div>
         </main>
-      </div>
+      </div> */}
     </div>
   );
 };

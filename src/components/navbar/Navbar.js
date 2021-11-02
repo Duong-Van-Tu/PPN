@@ -3,157 +3,103 @@ import { Link } from "react-router-dom";
 import $ from "jquery";
 import "./Navbar.css";
 const Navbar = () => {
-  const [showLanguage, setShowLanguage] = useState("hidden");
-  const [showHiddenMenu, setShowHiddenMenu] = useState("");
-  const [active, setActive] = useState("");
-  const handleshowLanguage = () => {
-    showLanguage === "hidden"
-      ? setShowLanguage("navbar__list-language")
-      : setShowLanguage("hidden");
-  };
+  const [languageList, setLanguageList] = useState("");
+  const [formLogin, setFormLogin] = useState("");
+  const [navbar, setNavbar] = useState("");
+  const handleShowLanguageListClick = () => {
+    languageList === "" ? setLanguageList("active") : setLanguageList("")
+  }
+  const handleShowFormClick = () => {
+    formLogin === "" ? setFormLogin("active") : setFormLogin("")
+  }
 
-  const handleShowMenu = () => {
-    showHiddenMenu === "" ? setShowHiddenMenu("active") : setShowHiddenMenu("");
-  };
-
+  const handleShowNavBar = () => {
+    navbar === "" ? setNavbar("active") : setNavbar("")
+  }
   useEffect(() => {
-    const timeOutShowLanguage = setTimeout(() => {
-      setShowLanguage("hidden");
-    }, 5000);
+    const languageListTimeout = setTimeout(() => {
+      setLanguageList("")
+    }, 5000)
 
     return () => {
-      clearTimeout(timeOutShowLanguage);
-    };
-  });
+      clearTimeout(languageListTimeout)
+    }
+  })
+ 
+// window.onscroll = () =>{
+//     loginForm.classList.remove('active');
+//     navbar.classList.remove('active');
+
+//     if(window.scrollY > 0){
+//         $('.header').classList.add('active');
+//     }else{
+//         $('.header').classList.remove('active');
+//     }
+// }
+
+// window.onload = () =>{
+//     if(window.scrollY > 0){
+//         $('.header').classList.add('active');
+//     }else{
+//         $('.header').classList.remove('active');
+//     }
+// }
 
   return (
-    <div className="navbar fixed top-0 left-0 right-0 shadow-lg">
-      <div className="navbar-top bg-white flex items-center justify-between px-4 pt-4 py-2 ">
-        <div className="navbar__left mr-20">
-          <Link to="/">
-            <img className="w-96" src="./images/logo.png" alt="logo" />
-          </Link>
-        </div>
-        <div className="navbar__right flex-1">
-          <div className="navbar__right-info items-center flex justify-end relative">
-            <div className="navbar__info-item flex relative">
-              <div className="navbar_hotline px-8">
-                Hotline:
-                <a
-                  href="tel:0977773553"
-                  className="navbar__info-link hover:text-green-600 "
-                >
-                  {" "}
-                  0902999000
-                </a>
-              </div>
-            </div>
-            <button
-              className="navbar__btn-language flex items-center bg-gray-200 py-1 px-2 rounded-lg hover:bg-gray-300"
-              onClick={handleshowLanguage}
-            >
-              <img src="./images/vi-vn.png" width="20" alt="" />
-              <i className="mx-0.5 fad fa-caret-down"></i>
-            </button>
-            <button className="btn-menu" onClick={handleShowMenu}>
-            <i class="fal fa-bars"></i>
-            </button>
-
-            <div
-              className={`${showLanguage} absolute z-10 bg-gray-50 w-32 top-7 rounded-lg right-0 shadow`}
-            >
-              <div className="navbar__language-item flex py-1 px-4 items-center cursor-pointer hover:bg-gray-200 rounded-t-lg">
-                <img
-                  className="mr-2"
-                  src="./images/vi-vn.png"
-                  width="20"
-                  alt="vi-vn"
-                />
-                <span className="text-sm font-normal">Việt Nam</span>
-              </div>
-              <div className="navbar__language-item flex items-center py-1 px-3 cursor-pointer hover:bg-gray-200 rounded-b-lg">
-                <img
-                  className="mr-2"
-                  src="./images/en-gb.png"
-                  width="20"
-                  alt="en-gb"
-                />
-                <span className="text-sm font-normal">English</span>
-              </div>
-            </div>
-          </div>
-          <div className="navbar__menu-list md:flex flex-wrap justify-around items-center space-x-1">
-            <Link
-              to="/"
-              className={`navbar__menu-link relative px-3 py-2 text-gray-700 hover:text-red-900 rounded-lg ${active}`}
-            >
-              <i className="fad fa-home"></i> Home
-            </Link>
-            <Link
-              to="/service"
-              className={`flex items-center navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900 ${active}`}
-            >
-              <i className="mr-0.5 fad fa-clone"></i>Dịch vụ
-            </Link>
-            <Link
-              to="/about"
-              className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900`}
-            >
-              <i className="mr-0.5 fad fa-address-card"></i>Về chúng tôi
-            </Link>
-            <Link
-              to="/price"
-              className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900`}
-            >
-              <i className="mr-0.5 fad fa-dollar-sign"></i>Báo giá
-            </Link>
-            <Link
-              to="/news"
-              className={`navbar__menu-link relative px-3 py-2 hover:text-red-900 text-gray-700 hover:text-gray-900`}
-            >
-              <i className="mr-0.5 fad fa-newspaper"></i>Tin tức
-            </Link>
-          </div>
-        </div>
+    <header className="header active">
+  <Link to="/" className="logo"> <img src="./images/logo.png" alt="" /></Link>
+  <div className="header__right">
+    <div className="header__right-top">
+      <div className="header__hotline">
+        <span>Hotline: </span> <a href="tel:0902999000">0902999000</a>
       </div>
-
-      {/* Menu mobible */}
-      <div className={`nav-btn ${showHiddenMenu}`}>
-        <div id="sidebar" className={`${showHiddenMenu}`}>
-          <button className="toggle-btn" onClick={handleShowMenu}>
-          <i class="fal fa-times"></i>
-          </button>
-          <ul>
-            <Link to="/" className="nav-link" onClick={handleShowMenu}>
-              <li>
-                <i className="fad fa-home"></i>Home
-              </li>
-            </Link>
-            <Link to="/service" className="nav-link" onClick={handleShowMenu}>
-              <li>
-                {" "}
-                <i className="mr-0.5 fad fa-clone"></i>Dịch vụ
-              </li>
-            </Link>
-            <Link to="/about" className="nav-link" onClick={handleShowMenu}>
-              <li>
-                <i className="mr-0.5 fad fa-address-card"></i>Về chúng tôi
-              </li>
-            </Link>
-            <Link to="/price" className="nav-link" onClick={handleShowMenu}>
-              <li>
-                <i className="mr-0.5 fad fa-dollar-sign"></i>Báo giá
-              </li>
-            </Link>
-            <Link to="/news" className="nav-link" onClick={handleShowMenu}>
-              <li>
-                <i className="mr-0.5 fad fa-newspaper"></i>Tin tức
-              </li>
-            </Link>
-          </ul>
+      <div className="header__language">
+        <button className="header__language-btn" onClick={handleShowLanguageListClick}>
+          <img src="./images/vi-vn.png" width={20} alt="" />
+          <i className="fas fa-sort-down" />
+        </button>
+        <div className={`language__list ${languageList}`}>
+          <div className="language__item">
+            <img src="./images/vi-vn.png" alt="" />
+            <span>Việt Nam</span>
+          </div>
+          <div className="language__item">
+            <img src="./images/en-gb.png" alt="" />
+            <span>English</span>
+          </div>
         </div>
       </div>
     </div>
+    <div className="header__right-bottom">
+      <nav className={`navbar ${navbar}`}>
+        <Link className="navbar__link" to="/" onClick={handleShowNavBar}><i className="fad fa-home-alt" />Home</Link>
+        <Link className="navbar__link" to="/about" onClick={handleShowNavBar}><i className="fad fa-id-card" />Về Chúng Tôi</Link>
+        <Link className="navbar__link" to="/service" onClick={handleShowNavBar}><i className="fab fa-servicestack" />Dịch Vụ</Link>
+        <a className="navbar__link" href="#contact" onClick={handleShowNavBar}><i className="fad fa-user-md-chat" />Nhận Tư Vấn</a>
+        <Link className="navbar__link" to="/" onClick={handleShowNavBar}><i className="fas fa-newspaper" />Tin Tức</Link>
+      </nav>
+      <div className="icons">
+        <div className="fas fa-bars" id="menu-btn" onClick={handleShowNavBar} />
+        <div className="fas fa-user" id="login-btn" onClick={handleShowFormClick}/>
+      </div>
+      <form action className={`login-form ${formLogin}`}>
+        <h3>Đăng Nhập</h3>
+        <input type="email" name placeholder="Nhập email của bạn" id className="box" />
+        <input type="password" name placeholder="Nhập mật khẩu của bạn" id className="box" />
+        <div className="remember">
+          <input type="checkbox" name id="remember-me" />
+          <label htmlFor="remember-me">Nhớ mật khẩu</label>
+        </div>
+        <input type="submit" value="Đăng Nhập" className="btn" />
+        <div className="links">
+          <a href="#">Quên mật khẩu</a>
+          <a href="#">Đăng ký</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+
   );
 };
 

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { services } from "../../data/data";
-import BtnSlider from "../BtnSlider";
-import "./Banner.css";
-const Banner = () => {
+const BannerService = () => {
   const [slideIndex, setSlideIndex] = useState(1);
-
   const nextSlide = () => {
     if (slideIndex !== services.length) {
       setSlideIndex(slideIndex + 1);
@@ -13,6 +11,10 @@ const Banner = () => {
     }
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const timeoutSlider = setTimeout(() => {
       nextSlide();
     }, 5000);
@@ -20,54 +22,42 @@ const Banner = () => {
       clearTimeout(timeoutSlider);
     };
   });
-
-  const prevSlide = () => {
-    if (slideIndex !== 1) {
-      setSlideIndex(slideIndex - 1);
-    } else if (slideIndex === 1) {
-      setSlideIndex(services.length);
-    }
-  };
-
   const moveDot = (index) => {
     setSlideIndex(index);
   };
   return (
-    <div className="home__banner">
+    <div className="banner-service">
       {services.map((data, index) => {
         return (
           <div
-            key={index}
+            key={data.id}
             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
           >
-            <img
-              src={`images/img${index + 1}.png`}
-              alt=""
-            />
+            <div className="service__slider-left">
+              <h1 className="service__slider-title">{data.title}</h1>
+              <Link to="/service">
+                <button className="btn">
+                  Xem thêm <i class="fal fa-chevron-double-right"></i>
+                </button>
+              </Link>
+            </div>
+            <div className="service__slider-right">
+              <img src={`./images/img${index + 1}.png`} alt="" />
+            </div>
           </div>
         );
       })}
-      <BtnSlider moveSlide={nextSlide} direction={"next"} />
-      <BtnSlider moveSlide={prevSlide} direction={"prev"} />
 
       <div className="container-dots">
         {Array.from({ length: 4 }).map((item, index) => (
           <div
-            key={index}
             onClick={() => moveDot(index + 1)}
             className={slideIndex === index + 1 ? "dot active" : "dot"}
           ></div>
         ))}
       </div>
-      <div className="banner-slogan">
-        <div className="slogan-top">Giao Nhận Vận Tải & Logistics </div>
-        <div className="slogan-bottom">
-          Nhanh Chóng - Chuyên Nghiệp - Hiệu Quả
-        </div>
-        <div className="banner-bottom"></div>
-      </div>
     </div>
   );
 };
 
-export default Banner;
+export default BannerService;

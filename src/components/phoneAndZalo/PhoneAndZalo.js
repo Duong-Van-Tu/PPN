@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import "./PhoneAndZalo.css"
 const PhoneAndZalo = () => {
   return (
-    <div className="zalo-phone fixed w-16 h-16">
-      <a href="https://zalo.me/0773641222" target="_blank">
+    <div className="zalo-phone">
+      <a href="https://zalo.me/0773641222" className="zalo__link" target="_blank">
         <img
-          className="zalo-img w-full rounded-full"
           src="./images/zalo.png"
-          alt=""
+          alt="zalo"
         />
       </a>
       <div
